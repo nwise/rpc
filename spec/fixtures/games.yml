@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  player1: 1
+  player2: 1
+  choice1: 1
+  choice2: 1
+
+two:
+  player1: 1
+  player2: 1
+  choice1: 1
+  choice2: 1

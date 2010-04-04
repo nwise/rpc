@@ -1,0 +1,23 @@
+<p>
+  <b>Player1:</b>
+  <%=h @game.player1 %>
+</p>
+
+<p>
+  <b>Player2:</b>
+  <%=h @game.player2 %>
+</p>
+
+<p>
+  <b>Choice1:</b>
+  <%=h @game.choice1 %>
+</p>
+
+<p>
+  <b>Choice2:</b>
+  <%=h @game.choice2 %>
+</p>
+
+
+<%= link_to 'Edit', edit_game_path(@game) %> |
+<%= link_to 'Back', games_path %>
