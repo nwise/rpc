@@ -1,0 +1,23 @@
+<p>
+  <b>Username:</b>
+  <%=h @player.username %>
+</p>
+
+<p>
+  <b>Email address:</b>
+  <%=h @player.email_address %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%=h @player.password %>
+</p>
+
+<p>
+  <b>Win count:</b>
+  <%=h @player.win_count %>
+</p>
+
+
+<%= link_to 'Edit', edit_player_path(@player) %> |
+<%= link_to 'Back', players_path %>
