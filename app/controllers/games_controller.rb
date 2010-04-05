@@ -40,8 +40,8 @@ class GamesController < ApplicationController
   # POST /games
   # POST /games.xml
   def create
-    @game = Game.new(params[:game])
-
+    #@game = Game.new(params[:game])
+    @game = Game.new(:player1 => current_player)
     respond_to do |format|
       if @game.save
         flash[:notice] = 'Game was successfully created.'

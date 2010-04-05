@@ -7,7 +7,7 @@ class PlayerSessionsController < ApplicationController
     @player_session = PlayerSession.new(params[:player_session])
     if @player_session.save
       flash[:notice] = "Successfully logged in."
-      redirect_to root_url
+      redirect_to player_url(current_player)
     else
       render :action => 'new'
     end

@@ -9,13 +9,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100404221612) do
+ActiveRecord::Schema.define(:version => 20100405220334) do
+
+  create_table "choices", :force => true do |t|
+    t.string   "name"
+    t.integer  "weakness_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "games", :force => true do |t|
-    t.integer  "player1"
-    t.integer  "player2"
-    t.integer  "choice1"
-    t.integer  "choice2"
+    t.integer  "player1_id"
+    t.integer  "player2_id"
+    t.integer  "choice1_id"
+    t.integer  "choice2_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,0 +1,11 @@
+--- 
+players_000001: 
+  created_at: 2010-04-04 22:48:49
+  crypted_password: 27a84fd9e8b2ee722b4b6e8f408dd2cc022cdb19e92ed16d01be26343c81a53eb3d04522ea48ddcc180942ec9bcf4c5f3b46905bd53033c06158da99c88fa45b
+  updated_at: 2010-04-04 22:48:49
+  username: nwise
+  win_count: 
+  id: "1"
+  password_salt: ZGTWlsQvW2pCQwCUTzQQ
+  persistence_token: 796c82d472c547c582fb55c2ecc802a3b4a2e73d91bdcd5c70457f427eff10fa4969926e4391ee1087a2c694276cce51e0bc3461e8ec76c7bb66987c69f42553
+  email_address: nathanwise@gmail.com
