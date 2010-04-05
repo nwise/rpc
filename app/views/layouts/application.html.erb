@@ -1,17 +1,73 @@
-<div id="user_nav">
-  <% if current_player %>
-    <%= link_to "Edit Profile", edit_player_path(:current) %> |
-    <%= link_to "Logout", logout_path %>
-  <% else %>
-    <%= link_to "Register", new_player_path %> |
-    <%= link_to "Login", login_path %>
-  <% end %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <%= stylesheet_link_tag 'style.css' -%>
+  <title>Rock::Paper::Scissors::Lizard::Spock</title>
+</head>
+<body>
+<!-- wrap starts here -->
+<div id="wrap">
+  <div id="header">
+    <h1 id="logo-text">
+      <%= link_to "rock<span>paper</span>scissors<span>lizard</span>spock", root_url %>
+    </h1>
+    <h2 id="slogan">there can be only one winner...</h2>
+    <div id="header-links">
+      <p>
+        <% if current_player %>
+          <%= link_to "Edit Profile", edit_player_path(:current) %> |
+          <%= link_to "Logout", logout_path %>
+        <% else %>
+          <%= link_to "Register", new_player_path %> |
+          <%= link_to "Login", login_path %>
+        <% end %>
+      </p>
+    </div>
+  </div>
+  <!-- navigation starts-->
+  <div  id="nav">
+    <div id="light-brown-line"></div>
+    <ul>
+      <li><%= link_to "Home", root_url %></li>
+      <li><%= link_to "Leader Board", players_url %></li>
+      <li><%= link_to "Game List", games_url %></li>
+      <li><%= link_to "Rules", '/' %></li>
+    </ul>
+  <!-- navigation ends-->
+  </div>
+
+  <!-- content-wrap starts -->
+  <div id="content-wrap">
+    <div id="sidebar">
+      <h1>Top Players</h1>
+      <ul class="sidemenu">
+        <li><%= "Player 1" %></li>
+        <li><%= "Player 2" %></li>
+        <li><%= "Player 3" %></li>
+      </ul>
+    <!-- sidebar ends -->
+    </div>
+    <div id="main">      
+      <% if flash[:note] -%>
+        <div class='flash_note'><%= flash[:note] %></div>
+      <% elsif  flash[:notice] -%>
+        <div class='flash_note'><%= flash[:notice] %></div>
+      <% elsif flash[:error] -%>
+        <div class='flash_error'><h1>Error!</h1><%= flash[:error] %></div>
+      <% end -%>
+      <%= yield %>
+    </div>  
+  </div>
+  <div id="footer">
+    <p>
+      &copy;<%= Time.now.strftime("%Y") %><strong>Rock::Paper::Scissors::Lizard::Spock</strong> |
+      Design by: <a href="http://www.styleshout.com/">styleshout</a> |
+      Valid <a href="http://validator.w3.org/check?uri=referer">XHTML</a> |
+      <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
+    </p>
+  </div>
 </div>
-<% if flash[:note] -%>
-  <div class='flash_note'><%= flash[:note] %></div>
-<% elsif  flash[:notice] -%>
-  <div class='flash_note'><%= flash[:notice] %></div>
-<% elsif flash[:error] -%>
-  <div class='flash_error'><h1>Error!</h1><%= flash[:error] %></div>
-<% end -%>
-<%= yield %>
+</body>
+</html>
+
+
