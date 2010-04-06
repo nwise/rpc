@@ -210,7 +210,8 @@ input.button {
 	position: relative;
 	clear: both;
 	float: left;	
-	width: 830px;	
+	width: 830px;
+        min-height:400px;
 	padding: 0; 	
 	border-bottom: 2px solid #FFF;
 	background: #F2EFBA url(/images/contentbg.jpg) repeat-y center top;
@@ -316,7 +317,7 @@ input.button {
 #main {
 	float: right;
 	width: 68%;
-	padding: 0; margin: 0 10px 0 0;
+	padding: 0; margin: 15px 10px 0 0;
 	display: inline;	
 }
 #main h1 {
@@ -458,4 +459,54 @@ input.button {
 /* display and additional classes */
 .clear { clear: both; }
 
+div.flash_note {
+  background-color:#ddffd1;
+  border:2px solid #32b704;
+  color:#185702;
+  padding:5px 20px 5px;
+  margin-bottom: 15px ;
+}
+
+div.flash_error, div.errorExplanation {
+  background-color:#ffddd1;
+  border:2px solid #b73204;
+  color:#571802;
+  padding:5px 20px 5px;
+  margin-bottom: 15px ;
+}
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
 

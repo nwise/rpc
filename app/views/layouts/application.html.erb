@@ -31,7 +31,7 @@
       <li><%= link_to "Home", root_url %></li>
       <li><%= link_to "Leader Board", players_url %></li>
       <li><%= link_to "Game List", games_url %></li>
-      <li><%= link_to "Rules", '/' %></li>
+      <li><%= link_to "Rules", rules_url %></li>
     </ul>
   <!-- navigation ends-->
   </div>
@@ -41,9 +41,9 @@
     <div id="sidebar">
       <h1>Top Players</h1>
       <ul class="sidemenu">
-        <li><%= "Player 1" %></li>
-        <li><%= "Player 2" %></li>
-        <li><%= "Player 3" %></li>
+        <% Player.by_win_count.each do |p| %>
+        <li><%= "#{p.username} - #{p.win_count} wins" %></li>
+        <% end %>
       </ul>
     <!-- sidebar ends -->
     </div>

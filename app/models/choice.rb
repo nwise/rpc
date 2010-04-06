@@ -1,5 +1,3 @@
 class Choice < ActiveRecord::Base
-  def weakness
-    Choice.find(self.weakness_id)
-  end
+  has_and_belongs_to_many :weaknesses
 end

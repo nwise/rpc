@@ -1,26 +1,19 @@
-<h1>Listing games</h1>
+<h1>Listing Games</h1>
 
 <table>
   <tr>
-    <th>Player1</th>
-    <th>Player2</th>
-    <th>Choice1</th>
-    <th>Choice2</th>
+    <th>Played On</th>
+    <th>Player1 - Choice</th>
+    <th>Player2 - Choice</th>
+    <th>Winner</th>
   </tr>
 
 <% @games.each do |game| %>
   <tr>
-    <td><%=h game.player1 %></td>
-    <td><%=h game.player2 %></td>
-    <td><%=h game.choice1 %></td>
-    <td><%=h game.choice2 %></td>
-    <td><%= link_to 'Show', game %></td>
-    <td><%= link_to 'Edit', edit_game_path(game) %></td>
-    <td><%= link_to 'Destroy', game, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= game.updated_at.strftime("%H:%M - %b %d, %Y") %></td>
+    <td><%=h game.player1.username %> - <%=h game.choice1.name %></td>
+    <td><%=h game.player2.username %> - <%=h game.choice2.name %></td>
+    <td><%= game.winner.username  %></td>
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New game', new_game_path %>

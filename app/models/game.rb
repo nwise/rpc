@@ -7,6 +7,7 @@ class Game < ActiveRecord::Base
   named_scope :available, :conditions =>  'choice2_id IS NULL'
 
   def winner
-    self.choice1.weakness == self.choice2 ? self.player2 : self.player1
+    #overly clever???
+    choice1.weaknesses.include?(Weakness.find(choice2)) ? player2 : player1
   end
 end

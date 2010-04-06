@@ -1,0 +1,51 @@
+--- 
+choices_weaknesses_000010: 
+  weakness_id: "4"
+  created_at: 2010-04-06 01:32:08
+  updated_at: 2010-04-06 01:32:08
+  choice_id: "5"
+choices_weaknesses_000001: 
+  weakness_id: "2"
+  created_at: 2010-04-05 22:04:04
+  updated_at: 2010-04-05 22:12:36
+  choice_id: "1"
+choices_weaknesses_000002: 
+  weakness_id: "5"
+  created_at: 2010-04-06 01:32:13
+  updated_at: 2010-04-06 01:32:13
+  choice_id: "1"
+choices_weaknesses_000003: 
+  weakness_id: "4"
+  created_at: 2010-04-06 01:32:08
+  updated_at: 2010-04-06 01:32:08
+  choice_id: "2"
+choices_weaknesses_000004: 
+  weakness_id: "3"
+  created_at: 2010-04-05 22:04:11
+  updated_at: 2010-04-05 22:04:11
+  choice_id: "2"
+choices_weaknesses_000005: 
+  weakness_id: "1"
+  created_at: 2010-04-05 22:04:01
+  updated_at: 2010-04-05 22:04:01
+  choice_id: "3"
+choices_weaknesses_000006: 
+  weakness_id: "5"
+  created_at: 2010-04-06 01:32:13
+  updated_at: 2010-04-06 01:32:13
+  choice_id: "3"
+choices_weaknesses_000007: 
+  weakness_id: "3"
+  created_at: 2010-04-05 22:04:11
+  updated_at: 2010-04-05 22:04:11
+  choice_id: "4"
+choices_weaknesses_000008: 
+  weakness_id: "1"
+  created_at: 2010-04-05 22:04:01
+  updated_at: 2010-04-05 22:04:01
+  choice_id: "4"
+choices_weaknesses_000009: 
+  weakness_id: "2"
+  created_at: 2010-04-05 22:04:04
+  updated_at: 2010-04-05 22:12:36
+  choice_id: "5"

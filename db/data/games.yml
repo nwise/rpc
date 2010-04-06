@@ -1,0 +1,57 @@
+--- 
+games_000001: 
+  choice2_id: "3"
+  created_at: 2010-04-05 23:02:39
+  choice1_id: "5"
+  player1_id: "1"
+  player2_id: "3"
+  updated_at: 2010-04-06 01:45:38
+  id: "2"
+games_000002: 
+  choice2_id: "2"
+  created_at: 2010-04-06 01:47:20
+  choice1_id: "5"
+  player1_id: "1"
+  player2_id: "3"
+  updated_at: 2010-04-06 01:47:20
+  id: "3"
+games_000003: 
+  choice2_id: "4"
+  created_at: 2010-04-06 01:47:21
+  choice1_id: "3"
+  player1_id: "1"
+  player2_id: "3"
+  updated_at: 2010-04-06 01:47:21
+  id: "4"
+games_000004: 
+  choice2_id: "1"
+  created_at: 2010-04-06 01:47:22
+  choice1_id: "5"
+  player1_id: "1"
+  player2_id: "3"
+  updated_at: 2010-04-06 01:47:22
+  id: "5"
+games_000005: 
+  choice2_id: "4"
+  created_at: 2010-04-06 01:47:22
+  choice1_id: "5"
+  player1_id: "1"
+  player2_id: "3"
+  updated_at: 2010-04-06 01:47:22
+  id: "6"
+games_000006: 
+  choice2_id: "2"
+  created_at: 2010-04-06 01:47:26
+  choice1_id: "3"
+  player1_id: "1"
+  player2_id: "3"
+  updated_at: 2010-04-06 01:47:26
+  id: "7"
+games_000007: 
+  choice2_id: "2"
+  created_at: 2010-04-06 01:47:26
+  choice1_id: "5"
+  player1_id: "1"
+  player2_id: "3"
+  updated_at: 2010-04-06 01:47:26
+  id: "8"
