@@ -1,23 +1,20 @@
+
+<% if @game.complete? or @game.player1 == current_player  %>
 <p>
   <b>Player1:</b>
-  <%=h @game.player1 %>
+  <%=h @game.player1.username %>
+  <b>Choice1:</b>
+  <%=h @game.choice1.name %>
 </p>
-
+<% end %>
+<% if @game.complete? or @game.player2 == current_player %>
 <p>
   <b>Player2:</b>
-  <%=h @game.player2 %>
-</p>
-
-<p>
-  <b>Choice1:</b>
-  <%=h @game.choice1 %>
-</p>
-
-<p>
+  <%=h @game.player2.username %>
   <b>Choice2:</b>
-  <%=h @game.choice2 %>
+  <%=h @game.choice2.name %>
 </p>
-
+<% end %>
 
 <%= link_to 'Edit', edit_game_path(@game) %> |
 <%= link_to 'Back', games_path %>

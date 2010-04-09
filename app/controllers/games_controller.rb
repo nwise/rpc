@@ -2,7 +2,7 @@ class GamesController < ApplicationController
   # GET /games
   # GET /games.xml
   def index
-    @games = Game.all
+    @games = Game.completed
 
     respond_to do |format|
       format.html # index.html.erb
@@ -33,15 +33,18 @@ class GamesController < ApplicationController
   end
 
   # GET /games/1/edit
-  def edit
+  def edit  
     @game = Game.find(params[:id])
+    unless @game.player1 == current_player
+      @game = Game.update_attributes(:player2 => current_player)
+    end
   end
 
   # POST /games
   # POST /games.xml
   def create
     #@game = Game.new(params[:game])
-    @game = Game.new(:player1 => current_player)
+      @game = Game.new(:player1 => current_player)
     respond_to do |format|
       if @game.save
         flash[:notice] = 'Game was successfully created.'
