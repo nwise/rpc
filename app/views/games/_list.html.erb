@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th>Game</th>
+    <th>Current Player</th>
+    <th></th>
+  </tr>
+  <% games.each do |game| %>
+  <tr>
+    <td><%= game.id %></td>
+    <td><%= game.player1.username %></td>
+    <td><%= link_to 'Join Game', edit_game_url(game) %></td>
+  </tr>
+  <% end %>
+</table>

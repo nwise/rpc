@@ -1,6 +1,5 @@
 <% unless available_games?  %>
-  Available Games:<br />
-  <%= render :partial => 'games/list', :locals => {:games => Game.available} %>
+  <%= render :partial => 'games/list', :locals => {:games => Game.available.without_player(current_player)} %>
 <% else %>
   <%= link_to "Create Game", games_url, {:method => :post} %>
 <% end %>

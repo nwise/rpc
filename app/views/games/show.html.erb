@@ -1,4 +1,3 @@
-
 <% if @game.complete? or @game.player1 == current_player  %>
 <p>
   <b>Player1:</b>
@@ -15,6 +14,3 @@
   <%=h @game.choice2.name %>
 </p>
 <% end %>
-
-<%= link_to 'Edit', edit_game_path(@game) %> |
-<%= link_to 'Back', games_path %>

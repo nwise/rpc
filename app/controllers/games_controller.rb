@@ -35,20 +35,22 @@ class GamesController < ApplicationController
   # GET /games/1/edit
   def edit  
     @game = Game.find(params[:id])
-    unless @game.player1 == current_player
-      @game = Game.update_attributes(:player2 => current_player)
+    if @game.complete?
+      render :show
+    elsif @game.player1 != current_player
+      @game.update_attributes(:player2 => current_player)
+      @game.reload      
     end
   end
 
   # POST /games
   # POST /games.xml
   def create
-    #@game = Game.new(params[:game])
-      @game = Game.new(:player1 => current_player)
+    @game = Game.new(:player1 => current_player)
     respond_to do |format|
       if @game.save
         flash[:notice] = 'Game was successfully created.'
-        format.html { redirect_to(@game) }
+        format.html { redirect_to(edit_game_url(@game)) }
         format.xml  { render :xml => @game, :status => :created, :location => @game }
       else
         format.html { render :action => "new" }

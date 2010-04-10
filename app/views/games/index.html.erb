@@ -13,7 +13,7 @@
     <td><%= game.updated_at.strftime("%H:%M - %b %d, %Y") %></td>
     <td><%=h game.player1.username %> - <%=h game.choice1.name %></td>
     <td><%=h game.player2.username %> - <%=h game.choice2.name %></td>
-    <td><%= game.winner.username  %></td>
+    <td><%=h game.tied? ? 'Tied!' : game.winner.username %></td>
   </tr>
 <% end %>
 </table>

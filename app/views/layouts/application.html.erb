@@ -15,6 +15,7 @@
     <div id="header-links">
       <p>
         <% if current_player %>
+          Welcome, <%= current_player.username %>
           <%= link_to "Edit Profile", edit_player_path(:current) %> |
           <%= link_to "Logout", logout_path %>
         <% else %>
@@ -39,6 +40,8 @@
   <!-- content-wrap starts -->
   <div id="content-wrap">
     <div id="sidebar">
+      <h1>Play Now</h1>
+      <%= render :partial => 'shared/game_nav' %>
       <h1>Top Players</h1>
       <ul class="sidemenu">
         <% Player.by_win_count.each do |p| %>
