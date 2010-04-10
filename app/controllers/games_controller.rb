@@ -14,9 +14,9 @@ class GamesController < ApplicationController
   # GET /games/1.xml
   def show
     @game = Game.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
+      format.js { render :update_game_view, :layout => false}
       format.xml  { render :xml => @game }
     end
   end
@@ -85,6 +85,14 @@ class GamesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(games_url) }
       format.xml  { head :ok }
+    end
+  end
+
+  def update_game_view
+    @game = Game.find(params[:id])
+    #render :nothing => true
+    if @game.complete?
+      redirect_to (game_url(@game))
     end
   end
 end

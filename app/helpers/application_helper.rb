@@ -2,6 +2,10 @@
 module ApplicationHelper
 
   def available_games?
-    Game.available.empty?
+    Game.available.without_player(current_player).empty?
+  end
+
+  def game_result(game)
+    game.tied? ? 'Tied!' : game.winner.username
   end
 end

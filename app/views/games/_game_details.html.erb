@@ -1,0 +1,37 @@
+<div id="game_area">
+  <div class="game-choice" id="player-1">
+  <% if @game.complete? or @game.player1 == current_player  %>
+  <p>
+    <strong>Player 1</strong>
+    <h2><%=h @game.player1.username %></h2>
+    <h3><%=h @game.choice1.name %></h3>
+    <%= image_tag("#{@game.choice1.name.downcase}.png") %>
+  </p>
+  <% end %>
+  </div>
+  <div class="game-choice" id="player-2">
+  <% if @game.complete? or @game.player2 == current_player %>
+  <p>
+    <strong>Player 2</strong>
+    <h2><%=h @game.player2.username %></h2>
+    <h3><%=h @game.choice2.name %></h3>
+    <%= image_tag("#{@game.choice2.name.downcase}.png") %>
+  </p>
+  <% end %>
+  </div>
+
+  <% if @game.complete? %>
+  <div id="result">
+    <h2>Winner: <%=h game_result(@game) %></h2>
+    <script>
+      game_updater.stop();
+    </script>
+  </div>
+  <% end %>
+
+  <%#= periodically_call_remote(
+     :condition => (not @game.complete?),
+     :frequency => 10.0,
+     :variable => 'game_updater',
+     :url => "/games/show/#{@game.id}") %>
+</div>

@@ -510,3 +510,17 @@ div.flash_error, div.errorExplanation {
   list-style: square;
 }
 
+.game-choice{
+    float:left;
+    width:200px;
+    border:2px solid #9f876b;
+    margin-right:10px;
+    padding: 0 15px;
+}
+#result{
+    float:left;
+    clear:both;
+    width:476px;
+    border:2px solid #9f876b;
+    margin-top:20px;
+}
