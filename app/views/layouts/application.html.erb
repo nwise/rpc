@@ -41,8 +41,10 @@
   <!-- content-wrap starts -->
   <div id="content-wrap">
     <div id="sidebar">
-      <h1>Play Now</h1>
-      <%= render :partial => 'shared/game_nav' %>
+      <% if current_player %>
+        <h1>Play Now</h1>
+        <%= render :partial => 'shared/game_nav' %>
+      <% end %>
       <h1>Top Players</h1>
       <ul class="sidemenu">
         <% Player.by_win_count.each do |p| %>
