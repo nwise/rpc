@@ -3,7 +3,7 @@ class Player < ActiveRecord::Base
   named_scope :by_win_count, :order => "win_count DESC"
 
   def increment_wins
-    self.win_count += 1
+    win_count =  win_count + 1
     save
   end
 end
