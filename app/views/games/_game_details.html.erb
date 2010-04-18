@@ -9,16 +9,19 @@
   </p>
   <% end %>
   </div>
-  <div class="game-choice" id="player-2">
   <% if @game.complete? or @game.player2 == current_player %>
+  <div class="game-choice" id="player-2">
   <p>
     <strong>Player 2</strong>
     <h2><%=h @game.player2.username %></h2>
     <h3><%=h @game.choice2.name %></h3>
     <%= image_tag("#{@game.choice2.name.downcase}.png") %>
   </p>
-  <% end %>
   </div>
+  <% else %>
+   <% #show waiting 
+   %>
+  <% end %>
 
   <% if @game.complete? %>
   <div id="result">
